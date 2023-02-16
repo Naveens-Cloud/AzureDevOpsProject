@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Test Company Leave Application - Manager</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+      }
+
+      h1 {
+        text-align: center;
+        margin-top: 50px;
+      }
+
+      .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 50px;
+      }
+
+      .form-container {
+        width: 50%;
+        padding: 20px;
+        background-color: #f2f2f2;
+        border-radius: 5px;
+        margin-top: 30px;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+      }
+
+      input[type="text"],
+      select {
+        width: 100%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        box-sizing: border-box;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+      }
+
+      input[type="submit"] {
+        width: 100%;
+        padding: 10px 20px;
+        font-size: 18px;
+        border-radius: 5px;
+        border: none;
+        cursor: pointer;
+        background-color: #1d1f1d;
+        color: white;
+      }
+
+      input[type="submit"]:hover {
+        background-color: #232423;
+      }
+
+      .required {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Test Company Leave Application - Manager</h1>
+    <div class="container">
+      <div class="form-container">
+        <h2>Create Staff Profile</h2>
+        <form id="staff-form">
+          <label for="first-name">First Name:</label>
+          <input type="text" id="first-name" name="first-name" required />
+          <br />
+          <label for="last-name">Last Name:</label>
+          <input type="text" id="last-name" name="last-name" required />
+          <br />
+          <label for="manager-name">Manager Name:</label>
+          <input type="text" id="manager-name" name="manager-name" required />
+          <br />
+          <label for="team-name">Team Name:</label>
+          <input type="text" id="team-name" name="team-name" />
+          <br />
+          <input type="submit" value="Submit" />
+        </form>
+      </div>
+      <br />
+      <br />
+      <button onclick="window.location.href = 'leave-entries.html'">Leave Entries</button>
+    </div>
+  </body>
+</html>

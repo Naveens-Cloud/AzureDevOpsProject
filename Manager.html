@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Test Company Manager Screen</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+      }
+
+      h1 {
+        text-align: center;
+        margin-top: 50px;
+      }
+
+      .tabs {
+        display: flex;
+        justify-content: center;
+        margin-top: 50px;
+      }
+
+      .tab {
+        padding: 10px 20px;
+        font-size: 18px;
+        border-radius: 5px;
+        border: none;
+        cursor: pointer;
+        background-color: #1d1f1d;
+        color: white;
+        margin: 0 10px;
+      }
+
+      .tab:hover {
+        background-color: #232423;
+      }
+
+      .active-tab {
+        background-color: #232423;
+      }
+
+      .tab-content {
+        display: none;
+        padding: 20px;
+        background-color: #f1f1f1;
+        border-radius: 5px;
+        margin-top: 20px;
+      }
+
+      .active-content {
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Test Company Manager Screen</h1>
+    <br />
+    <br />
+    <div class="tabs">
+      <button onclick="window.location.href = 'staffProfile.html'">Create a Staff Profile</button>
+      
+
+      <button class="tab" onclick="openTab(event, 'leave-entries')">Leave Entries</button>
+    </div>
+    <div id="create-staff-profile" class="tab-content active-content">
+      
+    </div>
+    <div id="leave-entries" class="tab-content">
+      
+    </div>
+    <script>
+      function openTab(event, tabId) {
+        var i, tabcontent, tablinks;
+        tabcontent = document.getElementsByClassName("tab-content");
+        for (i = 0; i < tabcontent.length; i++) {
+          tabcontent[i].style.display = "none";
+        }
+        tablinks = document.getElementsByClassName("tab");
+        for (i = 0; i < tablinks.length; i++) {
+          tablinks[i].className = tablinks[i].className.replace(" active-tab", "");
+        }
+        document.getElementById(tabId).style.display = "block";
+        event.currentTarget.className += " active-tab";
+      }
+    </script>
+      
+  </body>
+</html>

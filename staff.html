@@ -1,0 +1,63 @@
+<html>
+  <head>
+    <title>Staff Leave Application</title>
+  </head>
+  <body>
+    <form>
+      <h2>Staff Leave Application</h2>
+      <div>
+        <label for="staffName">Staff Name:</label>
+        <select id="staffName" name="staffName">
+          <option value="">Select Staff Member</option>
+        </select>
+      </div>
+      <div>
+        <label for="managerName">Manager Name:</label>
+        <input type="text" id="managerName" name="managerName" disabled />
+      </div>
+      <div>
+        <label for="fromDate">From Date:</label>
+        <input type="date" id="fromDate" name="fromDate" />
+      </div>
+      <div>
+        <label for="toDate">To Date:</label>
+        <input type="date" id="toDate" name="toDate" />
+      </div>
+      <div>
+        <label for="typeOfLeave">Type of Leave:</label>
+        <select id="typeOfLeave" name="typeOfLeave">
+          <option value="">Select Leave Type</option>
+          <option value="annualLeave">Annual Leave</option>
+          <option value="sickLeave">Sick Leave</option>
+          <option value="timeOff">Time in Liu</option>
+        </select>
+      </div>
+      <div>
+        <label for="comments">Comments:</label>
+        <textarea id="comments" name="comments"></textarea>
+      </div>
+      <div>
+        <label for="totalLeave">Total Leave:</label>
+        <input type="text" id="totalLeave" name="totalLeave" disabled />
+      </div>
+      <button type="submit">Submit</button>
+    </form>
+    <script>
+      const fromDate = document.getElementById("fromDate");
+      const toDate = document.getElementById("toDate");
+      const totalLeave = document.getElementById("totalLeave");
+      
+      fromDate.addEventListener("change", calculateLeave);
+      toDate.addEventListener("change", calculateLeave);
+      
+      function calculateLeave() {
+        const start = new Date(fromDate.value);
+        const end = new Date(toDate.value);
+        const diffTime = Math.abs(end - start);
+        const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+        
+        totalLeave.value = diffDays;
+      }
+    </script>
+  </body>
+</html>

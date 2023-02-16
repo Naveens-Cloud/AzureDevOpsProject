@@ -1,88 +1,49 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Test Company - Leave Approval Form</title>
+    <title>Test Company Leave Application</title>
     <style>
-      table {
-        width: 500px;
-        margin: 50px auto;
-        border-collapse: collapse;
+      body {
+        font-family: Arial, sans-serif;
       }
-      th, td {
-        padding: 10px;
-        border: 1px solid #ccc;
+
+      h1 {
+        text-align: center;
+        margin-top: 50px;
+      }
+
+      h2 {
         text-align: left;
+        margin-top: 30px;
       }
-      th {
-        background-color: #ddd;
-      }
-      .total {
-        text-align: right;
-      }
+
       button {
-        display: block;
-        margin: 20px auto;
         padding: 10px 20px;
-        background-color: #4CAF50;
-        color: white;
-        border: none;
+        font-size: 18px;
         border-radius: 5px;
+        border: none;
         cursor: pointer;
+        margin-left: 45%;
+        margin-top: 20px;
+        background-color: #1d1f1d;
+        color: white;
+      }
+
+      button:hover {
+        background-color: #232423;
       }
     </style>
   </head>
   <body>
-    <h1 style="text-align: center;">Test Company</h1>
-    <h2 style="text-align: center;">Leave Approval Form</h2>
-    <table>
-      <tr>
-        <th>Employee Name:</th>
-        <td>
-          <select id="employeeName">
-            <option value="employee1">Employee 1</option>
-            <option value="employee2">Employee 2</option>
-            <option value="employee3">Employee 3</option>
-            <option value="employee4">Employee 4</option>
-          </select>
-        </td>
-      </tr>
-      <tr>
-        <th>Manager Name:</th>
-        <td>
-          <select id="managerName">
-            <option value="manager1">Manager 1</option>
-            <option value="manager2">Manager 2</option>
-            <option value="manager3">Manager 3</option>
-            <option value="manager4">Manager 4</option>
-          </select>
-        </td>
-      </tr>
-      <tr>
-        <th>From Date:</th>
-        <td><input type="date" id="fromDate"></td>
-      </tr>
-      <tr>
-        <th>To Date:</th>
-        <td><input type="date" id="toDate"></td>
-      </tr>
-      <tr>
-        <th>Leave Type:</th>
-        <td>
-          <select id="leaveType">
-            <option value="holiday">Holiday Leave</option>
-            <option value="sick">Sick Leave</option>
-            <option value="domestic">Domestic Leave</option>
-            <option value="other">Other</option>
-          </select>
-        </td>
-      </tr>
-      <tr>
-        <th>Details:</th>
-        <td><textarea id="details"></textarea></td>
-      </tr>
-      <tr class="total">
-        <th>Total Leaves:</th>
-        <td id="totalLeaves">0</td>
-      </tr>
-    </table>
-    <button onclick="calculateTotal"> submit</button>
+    <h1>Test Company Leave Application</h1>
+    <br />
+    <br />
+    <div>
+      <button onclick="window.location.href = 'staff.html'">Staff</button>
+      &nbsp; &nbsp;
+      <button onclick="window.location.href = 'manager.html'">Manager</button>
+    </div>
+  </body>
+</html>
+
+
